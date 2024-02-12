@@ -216,7 +216,7 @@ const genrePartialAvailability = (genre) => ({ code: 200, data: books.some(book 
 //getCountBy, the first param will be the counting property (genre, author, or publisher), you must return a new object with the name of the property that you are counting and the counter.
 const getCountBy = (property) => ({ code: 200, data: books.reduce((acc, book) => ({ ...acc, [book[property]]: (acc[book[property]] || 0) + 1 }), {}) });
   
-console.log(getBook("9780553380163"));
+//console.log(getBook("9780553380163"));
 //console.log(getBooks());
 //console.log(addBook({ title: "The Power of Now", author: "Eckhart Tolle", isbn: "9781577314806", genre: "Spirituality", year: 1997, publisher: "New World Library", stock: 9 }));
 //console.log(removeBookByTitleOrISBN("9780451524935"));
@@ -225,5 +225,5 @@ console.log(getBook("9780553380163"));
 //console.log(getBooksByYear(2011));
 //console.log(genreFullAvailability("Self-help"));
 //console.log(genrePartialAvailability("Self-help"));
-//console.log(getCountBy("genre"));
+console.log(getCountBy("genre"));
   
